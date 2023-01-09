@@ -1,0 +1,22 @@
+def onedigit(num):
+    return((num>=0)and
+           (num<10))
+def ispalutil(num,dupnum):
+    if onedigit(num):
+        return(num==(dupnum[0])%10)
+    if not ispalutil(num//10,dupnum):
+        return false
+    dupnum[0]=dupnum[0]//10
+    return(num%10==(dupnum[0])%10)
+def ispal(num):
+    #if num is negative,
+    #make it positive
+    if(num<0):
+        num=(-num)
+    dupnum=[num] # *dupnum=num
+    return ispalutil(num,dupnum)
+n=12321
+if ispal(n):
+    print("yes")
+else:
+    print("no")
