@@ -1,0 +1,15 @@
+from random import sample
+
+#intialize list
+test_list = ['python','programs','are','very','difficult']
+
+#printing original list
+print("the original list : "+ str(test_list))
+
+#Screamble strings in list
+#using list comprehension + sample() + join()
+res = [''.join(sample(ele,len(ele))) for ele in test_list]
+
+#printing result
+print("Scrambled strings in list are : " + str(res))
+
