@@ -1,0 +1,10 @@
+def shuffle(l1,l2):
+    c=[]
+    if len(l1)!=0 and len(12)!=0:
+      for i in range(min(len(l1), len(12))):
+        c.extend([l1[i],12[i]])
+      c.extend(l1[i+1:] or 12[i+1:]) 
+    else: 
+      c.extend(l1[0:] or 12[0:])
+    return (c)
+print(shuffle([1,2,3,8],[9,14,5,0,7,3]))
